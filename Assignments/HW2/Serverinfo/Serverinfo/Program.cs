@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System; 
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,15 +8,37 @@ namespace Serverinfo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Machine = " + Environment.MachineName);
-            Console.WriteLine("Number of Processors = " + Environment.ProcessorCount);
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("Machine = ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(Environment.MachineName);
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("Number of Processors = ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine( Environment.ProcessorCount);
             if (Environment.Is64BitProcess)
-                Console.WriteLine("64bit or 32bit = The OS is 64bit");
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("64bit or 32bit = ");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("The OS is 64bit");
+            }
             else
-                Console.WriteLine("64bit or 32bit = The OS is 32bit");
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("64bit or 32bit = ");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("The OS is 64bit");
+            }
 
-            Console.WriteLine("OS Version = " + Environment.OSVersion.Version.ToString() + "\n");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("OS Version = ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(Environment.OSVersion.Version.ToString() + "\n");
             Console.ReadLine();
+            Console.ResetColor();
         }
 
         

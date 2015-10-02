@@ -12,7 +12,7 @@ namespace Zipfiles
     {
         static void Main(string[] args)
         {
-            var sourcefolder = "impoprtant";
+            var sourcefolder = "important";
             var backfolder = "backup";
             CreateZipBackup(sourcefolder, backfolder);
         }
